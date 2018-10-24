@@ -1,37 +1,22 @@
 {
     "type": "overpass",
     "name": {
-        "ast": "Hestoria",
-        "cs": "Historické",
-        "de": "Geschichte",
-        "el": "Ιστορικά",
-        "en": "Historic",
-        "et": "Ajalooline",
-        "fr": "Histoire",
-        "hu": "Történelmi objektumok",
-        "it": "Storia",
-        "ja": "記念",
-        "nl": "Historisch",
-        "pl": "Miejsca Historyczne",
-        "pt": "Histórico",
-        "pt-br": "Histórico",
-        "ro": "Istoric",
-        "ru": "Историческое",
-        "uk": "Історія"
+        "de": "Denkmäler",
+        "en": "Memorials"
     },
     "query": {
         "11": [
             "(",
-            "node[historic~\"^(castle|archaeological_site|battlefield)$\"];",
-            "way[historic~\"^(castle|archaeological_site|battlefield)$\"];",
-            "relation[historic~\"^(castle|archaeological_site|battlefield)$\"];",
+            "node[historic~\"^(monument)$\"];",
+            "way[historic~\"^(monument)$\"];",
+            "relation[historic~\"^(monument)$\"];",
             ")"
         ],
         "14": [
             "(",
-            "node[historic!~\"^(memorial|monument)\"];",
-            "way[historic!~\"^(memorial|monument)\"];",
-            "relation[historic!~\"^(memorial|monument)\"];",
+            "node[historic~\"^(memorial|monument)$\"];",
+            "way[historic~\"^(memorial|monument)$\"];",
+            "relation[historic~\"^(memorial|monument)$\"];",
             ")"
         ]
     },
